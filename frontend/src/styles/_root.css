@@ -1,0 +1,30 @@
+:root {
+    /* Couleurs principales */
+    --primary-color: #ff0005;      /* Rouge vif, action */
+    --secondary-color: #9a1501;    /* Rouge sombre, profondeur */
+    --item-color: #b72902;         /* Rouge intermédiaire, éléments UI */
+    /* Variations de rouge */
+    --primary-hover: #ff2a2f;      /* Survol / accent */
+    --secondary-hover: #b31c05;
+    --danger-color: #ff3b3f;       /* Alertes critiques */
+    --danger-dark: #7a0f00;
+    /* Fonds */
+    --background-color: #000000;   /* Noir absolu */
+    --background-soft: #0e0e0e;    /* Noir légèrement adouci */
+    --background-elevated: #151515;/* Cartes / modales */
+    /* Textes */
+    --text-color: #ffffff;         /* Texte principal */
+    --text-muted: #c7c7c7;         /* Texte secondaire */
+    --text-disabled: #6a6a6a;      /* Texte inactif */
+    /* Contours & séparateurs */
+    --outline-color: #000000;
+    --border-color: #2a2a2a;
+    --divider-color: #1f1f1f;
+    /* États UI */
+    --focus-color: #ff5558;
+    --success-color: #2ecc71;      /* Rare mais utile (contraste fort) */
+    --warning-color: #ff9800;
+    /* Effets */
+    --shadow-color: rgba(255, 0, 5, 0.25);
+    --glow-color: rgba(255, 0, 5, 0.6);
+}

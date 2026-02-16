@@ -1,0 +1,132 @@
+@import './_root.css';
+
+.navbar-wrapper {
+    width: 100%;
+    background-color: var(--background-soft);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Conteneurs de recherche (Tous identiques maintenant) */
+.search-bar-wrapper,
+.champion-search-wrapper,
+.category-search-wrapper {
+    flex: 1;
+    min-width: 160px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Conteneur du premier champ (Recherche) */
+.search-bar-wrapper {
+    flex: 1.5; /* On lui donne un peu plus de largeur qu'aux autres */
+    min-width: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* L'icône loupe positionnée ABSOLUMENT à l'intérieur */
+.search-bar-wrapper label {
+    position: absolute;
+    left: 14px;      /* Distance du bord gauche */
+    top: 50%;        /* Centrage vertical */
+    transform: translateY(-50%); /* Ajustement précis du centrage */
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+/* L'input de recherche avec un padding gauche important */
+.search-bar-wrapper input {
+    padding-left: 42px !important; /* On pousse le texte pour ne pas chevaucher la loupe */
+}
+
+/* Style commun pour harmoniser tous les inputs */
+.search-bar-wrapper input,
+.champion-search-wrapper input,
+.category-search-wrapper input {
+    width: 100%;
+    height: 42px;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.search-bar-wrapper input:focus {
+    border-color: var(--primary-color);
+    background-color: #1a1a1a;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+}
+/* Section Prix */
+.price-range-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1.2;
+    min-width: 200px;
+    padding: 0 10px;
+}
+
+.price-range-wrapper label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.price-range-wrapper input[type="range"] {
+    flex: 1;
+    cursor: pointer;
+    accent-color: var(--primary-color); /* Méthode moderne pour colorer le curseur */
+}
+
+/* Bouton Filtrer */
+.filter-button-wrapper button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.filter-button-wrapper button:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+/* Responsive rapide */
+@media (max-width: 1100px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .price-range-wrapper {
+        min-width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
